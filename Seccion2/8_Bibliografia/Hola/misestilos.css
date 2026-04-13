@@ -1,0 +1,27 @@
+a {
+    color:blanchedalmond
+}
+
+p {
+    color: rgb(167, 167, 251);
+}
+
+h1 {
+    color: rgb(167, 167, 251);
+}
+
+h2 {
+    color: rgb(101, 113, 219);
+}
+
+h3 {
+    color:red
+}
+
+.imp{
+    color:yellowgreen;
+    border: 5px; border-style: solid;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    background-color: brown;
+}

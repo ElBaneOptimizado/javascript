@@ -1,0 +1,22 @@
+p {
+    color: rgb(167, 167, 251);
+}
+
+a{
+    color: blanchedalmond
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    color:bisque
+}
+
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(151, 151, 209)
+}   
+
+h3{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: color(srgb rgb(76, 76, 134))
+}
