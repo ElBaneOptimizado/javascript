@@ -1,0 +1,27 @@
+p{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:dimgrey
+}
+
+h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(138, 106, 65) 
+}
+
+div {
+    color: red;
+}
+
+body{
+ background-color:lightcyan;
+}
+
+button[onclick="Finalizar()"] {
+    background-color: green;
+    color: white;
+}
+
+button[onclick="location.reload()"] {
+    background-color: red;
+    color: white;
+}
