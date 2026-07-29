@@ -16,6 +16,10 @@
     <button onclick="Finalizar()">Finalizar</button>
     <button onclick="location.reload()">Reintentar</button>
 
+    <audio id="audioAlarma">
+        <source src="Audio/alarma.mp3" type="audio/mpeg">
+    </audio>
+
     <p><strong>1.¿Cual es la Capital de Rusia?</strong></p>
     <input type="text" id="resp1">
     
@@ -49,7 +53,10 @@
             actualizarContador(); 
         } else {
             detenerContador(); 
-            alert("¡GAME OVER! Vuelva a intentarlo."); 
+            document.getElementById("audioAlarma").play();
+            setTimeout(function() {
+                alert("¡GAME OVER! Vuelva a intentarlo."); 
+            }, 100);
         }
     }
 
@@ -59,14 +66,18 @@
 
     function Finalizar() {
         detenerContador(); 
+        document.getElementById("audioAlarma").play();
+        
         let fecha = new Date().toLocaleDateString('es-ES');
         
-        alert("Fecha: " + fecha + " | Respuestas: " + 
-              document.getElementById("resp1").value + ", " + 
-              document.getElementById("resp2").value + ", " + 
-              document.getElementById("resp3").value + ", " + 
-              document.getElementById("resp4").value + ", " + 
-              document.getElementById("resp5").value);
+        setTimeout(function() {
+            alert("Fecha: " + fecha + " | Respuestas: " + 
+                  document.getElementById("resp1").value + ", " + 
+                  document.getElementById("resp2").value + ", " + 
+                  document.getElementById("resp3").value + ", " + 
+                  document.getElementById("resp4").value + ", " + 
+                  document.getElementById("resp5").value);
+        }, 100);
     }
     </script>
 </body>
