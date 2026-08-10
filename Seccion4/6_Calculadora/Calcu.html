@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcuuuu</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body>
+
+    <div class="calc-box">
+        <h1>Calculadora</h1>
+        
+        <input type="number" id="n1">
+        <input type="number" id="n2">
+
+        <div class="row">
+            <button onclick="sumar()">+</button>
+            <button onclick="restar()">-</button>
+            <button onclick="multiplicar()">x</button>
+            <button onclick="dividir()">/</button>
+        </div>
+
+        <div class="row text-buttons">
+            <button onclick="raiz()">raiz</button>
+            <button onclick="potencia()">potencia</button>
+        </div>
+
+        <div class="row text-buttons">
+            <button onclick="absoluto()">absoluto</button>
+            <button onclick="aleatorio()">random</button>
+        </div>
+
+        <h2>Resultado:</h2>
+        
+        <input type="text" id="inputResultado" readonly>
+
+        <div class="row text-buttons target-buttons">
+            <button onclick="redondearRound()">round</button>
+            <button onclick="redondearFloor()">floor</button>
+            <button onclick="redondearCeil()">ceil</button>
+        </div>
+    </div>
+    
+<script>
+        function mostrarResultado(valor) {
+            document.getElementById('inputResultado').value = valor;
+        }
+
+        function obtenerValores() {
+            return {
+                v1: parseFloat(document.getElementById('n1').value) || 0,
+                v2: parseFloat(document.getElementById('n2').value) || 0
+            };
+        }
+
+        function obtenerResultadoActual() {
+            return parseFloat(document.getElementById('inputResultado').value) || 0;
+        }
+
+        function sumar() {
+            const datos = obtenerValores();
+            const res = datos.v1 + datos.v2;
+            mostrarResultado(res);
+        }
+
+        function restar() {
+            const datos = obtenerValores();
+            const res = datos.v1 - datos.v2;
+            mostrarResultado(res);
+        }
+
+        function multiplicar() {
+            const datos = obtenerValores();
+            const res = datos.v1 * datos.v2;
+            mostrarResultado(res);
+        }
+
+        function dividir() {
+            const datos = obtenerValores();
+            const res = datos.v2 !== 0 ? datos.v1 / datos.v2 : "Error";
+            mostrarResultado(res);
+        }
+
+        function raiz() {
+            const datos = obtenerValores();
+            const res = datos.v1 >= 0 ? Math.sqrt(datos.v1) : "Error";
+            mostrarResultado(res);
+        }
+
+        function potencia() {
+            const datos = obtenerValores();
+            const res = Math.pow(datos.v1, datos.v2);
+            mostrarResultado(res);
+        }
+
+        function absoluto() {
+            const datos = obtenerValores();
+            const res = Math.abs(datos.v1);
+            mostrarResultado(res);
+        }
+
+        function random() {
+            const res = Math.random();
+            mostrarResultado(res);
+        }
+
+        function redondearRound() {
+            const actual = obtenerResultadoActual();
+            mostrarResultado(Math.round(actual));
+        }
+
+        function redondearFloor() {
+            const actual = obtenerResultadoActual();
+            mostrarResultado(Math.floor(actual));
+        }
+
+        function redondearCeil() {
+            const actual = obtenerResultadoActual();
+            mostrarResultado(Math.ceil(actual));
+        }
+    </script>
+    
+</body>
+</html>

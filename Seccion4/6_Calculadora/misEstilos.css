@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.calc-box {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 360px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    color: #495057;
+}
+
+input[type="number"], 
+input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background-color: #f8f9fa;
+    color: #212529;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #000000;
+    background-color: #ffffff;
+}
+
+#inputResultado {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    font-weight: 600;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.text-buttons {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.target-buttons {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+button {
+    background-color: #ffffff;
+    color: #212529;
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: capitalize;
+}
+
+button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+button:active {
+    transform: scale(0.97);
+}
