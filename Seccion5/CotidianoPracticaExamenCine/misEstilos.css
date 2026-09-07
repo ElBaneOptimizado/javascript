@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    background-color: #fafafa;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+
+
+input, select, button {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+
+button {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+#resultado {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
