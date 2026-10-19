@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Practicas Loop For 4</title>
+</head>
+<body>
+
+    <label for="numeroInput">Introduce un número: </label>
+    <input type="number" id="numeroInput" placeholder="Ej. 5">
+    <button onclick="obtenerNumero()">Mostrar Tabla</button>
+
+    <div id="resultadoTabla"></div>
+
+    <script>
+        function obtenerNumero() {
+            let num = document.getElementById("numeroInput").value;
+            let numero = parseInt(num);
+
+
+            testLoop(numero);
+        }
+
+        function testLoop(numero) {
+            let caja = document.getElementById("resultadoTabla");
+            caja.innerHTML = "<h2>Tabla de multiplicar del: " + numero + "</h2>";
+
+            for (let x = 1; x <= 10; x++) {
+                let resultado = numero * x;
+                caja.innerHTML += numero + " x " + x + " = " + resultado + "<br>";
+            }
+        }
+    </script>
+
+</body>
+</html>
