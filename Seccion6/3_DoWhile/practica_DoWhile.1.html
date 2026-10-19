@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  function testLoop(totalVueltas) {
+    let contador = 1;
+    do {
+        console.log("Vuelta número: " + contador);
+        contador++;
+    } while (contador <= totalVueltas);
+}
+
+let vueltasUsuario = prompt("¿Cuántas vueltas deseas?");
+testLoop(vueltasUsuario);
+
+</script>
+</body>
+</html>
